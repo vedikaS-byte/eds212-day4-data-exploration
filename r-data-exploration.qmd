@@ -5,10 +5,12 @@ editor: visual
 ---
 
 # Data exploration and visualization practice
-Here, we will explore how to use GGally and skimr for data exploration and visualization. 
+
+Here, we will explore how to use GGally and skimr for data exploration and visualization.
 
 ## Data exploration
-Use the skimr package to explore the built-in diamonds dataset 
+
+Use the skimr package to explore the built-in diamonds dataset
 
 ```{r}
 library(skimr)
@@ -29,7 +31,9 @@ skimr::skim(diamonds)
 ```
 
 ## Data visualizations
-Now, we will use GGally paired with ggplot to visualize our data. 
+
+Now, we will use GGally paired with ggplot to visualize our data.
+
 ```{r}
 GGally::ggpairs(diamonds)
 diamonds %>% ggplot(aes(x = price, y = carat)) + geom_point()
@@ -37,18 +41,10 @@ diamonds %>% ggplot(aes(x = price, y = carat)) + geom_point()
 
 ```
 
-
 ```{r}
 diamonds %>% ggplot(aes(x = carat)) + geom_histogram()
 
 
 diamonds %>% ggplot(aes(x = clarity, y = price)) + geom_boxplot()
 
-
-
 ```
-
-
-
-
-
